@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRide.API", "TheRide.API\TheRide.API.csproj", "{E47C8923-3FCE-4BA6-BC3D-734700492117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRide.API.UnitTests", "TheRide.API.UnitTests\TheRide.API.UnitTests.csproj", "{C2905A6A-78C6-4E87-8DD5-8BEC5DBD9124}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E47C8923-3FCE-4BA6-BC3D-734700492117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47C8923-3FCE-4BA6-BC3D-734700492117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47C8923-3FCE-4BA6-BC3D-734700492117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47C8923-3FCE-4BA6-BC3D-734700492117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2905A6A-78C6-4E87-8DD5-8BEC5DBD9124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2905A6A-78C6-4E87-8DD5-8BEC5DBD9124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2905A6A-78C6-4E87-8DD5-8BEC5DBD9124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2905A6A-78C6-4E87-8DD5-8BEC5DBD9124}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

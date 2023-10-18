@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: TheRide.API/Dockerfile
+    volumes:
+      - ./artifacts:/artifacts

@@ -1,2 +1,3 @@
-# 4TheRide.API.Gateway
-API gateway for 4TheRide project.
+# 4theride.API
+
+## This API is used for acessing 4theride project data.
