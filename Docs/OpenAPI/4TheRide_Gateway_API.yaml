@@ -1,0 +1,145 @@
+openapi: 3.0.3
+info:
+  title: 4TheRide Gateway API
+  version: v1
+paths:
+  '/api/{version}/Cars':
+    get:
+      tags:
+        - Cars
+      parameters:
+        - name: version
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: paginationToken
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Token that indicates where pagination is up to.
+        - name: limit
+          in: query
+          schema:
+            type: number
+            default: 50
+            minimum: 1
+            maximum: 1000
+          description: Maximum number of records to return.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarResults'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                type: string
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                type: string
+        '500':
+          description: Internal Server Error
+          content:
+            text/plain:
+              schema:
+                type: string
+  '/api/{version}/Models':
+    get:
+        tags:
+          - Models
+        parameters:
+          - name: version
+            in: path
+            required: true
+            schema:
+              type: string
+          - name: paginationToken
+            in: query
+            required: false
+            schema:
+              type: string
+            description: Token that indicates where pagination is up to.
+          - name: limit
+            in: query
+            schema:
+              type: number
+              default: 50
+              minimum: 1
+              maximum: 1000
+            description: Maximum number of records to return.
+          - name: carId
+            in: query
+            required: true
+            schema:
+              type: string
+            description: Car identifier
+        responses:
+          '200':
+            description: Success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/CarResults'
+          '400':
+            description: Bad Request
+            content:
+              text/plain:
+                schema:
+                  type: string
+          '404':
+            description: Not Found
+            content:
+              text/plain:
+                schema:
+                  type: string
+          '500':
+            description: Internal Server Error
+            content:
+              text/plain:
+                schema:
+                  type: string
+components:
+  schemas:
+    ModelResults:
+      type: object
+      properties:
+        paginationToken:
+          type: string
+        page:
+          type: array
+          items:
+            $ref: '#/components/schemas/Model'
+    Model:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        carId:
+          type: string
+    CarResults:
+      type: object
+      properties:
+        paginationToken:
+          type: string
+        page:
+          type: array
+          items:
+            $ref: '#/components/schemas/Car'
+    Car:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string  
